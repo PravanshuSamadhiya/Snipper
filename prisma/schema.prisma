@@ -15,3 +15,8 @@ model Snippet {
   title  String
   code   String
 }
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL", "file:./dev.db")
+}
