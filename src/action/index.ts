@@ -37,7 +37,7 @@ export async function createSnippet(prevState:{message: string}, formData: FormD
         return { message: "Code is required and must be longer" }
     }
 
-  const snippet = await prisma.snippet.create({
+   await prisma.snippet.create({
       data:{
          title,
          code
